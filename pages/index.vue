@@ -18,24 +18,24 @@
       //- Projects
       section.mt-16
         .max-w-4xl
-          h2.text-4xl.font-bold.leading-snug Here are some projects I worked on.
+          h2.text-4xl.font-bold.leading-snug(data-aos="fade") Here are some projects I worked on.
 
         section.mt-12(v-for="project in data.projects")
-          h3.text-3xl {{ project.title }}
-          p
+          h3.text-3xl(data-aos="fade") {{ project.title }}
+          p(data-aos="fade")
             template(v-for="(link, index) in project.links")
               a.animated-link.small-link(:href="link.url" target="_blank").text-teal-400 {{ link.label }}
               template(v-if="index < project.links.length - 1")
                 |
                 | /
                 |
-          .my-4
+          .my-4(data-aos="fade")
             p.text-gray-700(v-html="project.description")
 
-          section.bg-gray-100.p-20
+          section.bg-gray-100.p-20(data-aos="fade")
             img.w-full.rounded-lg(:src="require(`@/assets/images/${project.image_url}`)")
 
-        section.mt-12
+        section.mt-12(data-aos="fade")
           .text-xl.text-gray-400
             | ...and
             |
@@ -46,60 +46,44 @@
       //- Games
       section.mt-56
         .max-w-4xl
-          h2.text-4xl.font-bold.leading-snug I’ve also developed a few video games and joined game-making contests.
+          h2.text-4xl.font-bold.leading-snug(data-aos="fade") I’ve also developed a few video games and joined game-making contests.
 
         section
           .flex.flex-wrap.-mx-4
             div.px-4.mt-12(v-for="game in data.games" class="w-1/2")
-              h3.text-3xl {{ game.title }}
-              p.mb-4
+              h3.text-3xl(data-aos="fade") {{ game.title }}
+              p.mb-4(data-aos="fade")
                 template(v-for="(link, index) in game.links")
                   a.animated-link.small-link(:href="link.url" target="_blank").text-teal-400 {{ link.label }}
                   template(v-if="index < game.links.length - 1")
                     |
                     | /
                     |
-              section.flex.bg-gray-100.p-4.game-image-wrapper
+              section.flex.bg-gray-100.p-4.game-image-wrapper(data-aos="fade")
                 .m-auto
                   img.shadow-xl.rounded-lg(:src="require(`@/assets/images/${game.image_url}`)")
 
       //- Talks
       section.mt-56
         .max-w-4xl
-          h2.text-4xl.font-bold.leading-snug I do talks & workshops about web and game development as well.
+          h2.text-4xl.font-bold.leading-snug(data-aos="fade") I do talks & workshops about web and game development as well.
 
         //- Nuxt talk
         section.mt-10(v-for="talk in data.talks")
-          h3.text-2xl {{ talk.title }}
+          h3.text-2xl(data-aos="fade") {{ talk.title }}
           .mb-4
-            p.text-gray-600 {{ talk.description }}
-          section.bg-gray-100.p-24(v-if="talk.image_url")
+            p.text-gray-600(data-aos="fade") {{ talk.description }}
+          section.bg-gray-100.p-24(v-if="talk.image_url" data-aos="fade")
             img.w-full(:src="require(`@/assets/images/${talk.image_url}`)")
-
-      //- Blogs
-      //- section.mt-56
-      //-   h2.text-4xl.font-bold.leading-snug I also maintain and write for several blogs.
-
-      //-   //- Ragna Mobile Guide
-      //-   section.mt-10
-      //-     h3.text-2xl Ragna Mobile Guide
-      //-     p.mb-4
-      //-       a.text-teal-400 Website
-      //-       |
-      //-       | /
-      //-       |
-      //-       a.text-teal-400 Facebook Page
-      //-     section
-      //-       img(src="https://placekitten.com/200/200")
 
       //- Work
       section.mt-40
-        h2.text-4xl.font-bold.leading-snug I've been working in the IT industry for almost six years.
+        h2.text-4xl.font-bold.leading-snug(data-aos="fade") I've been working in the IT industry for almost six years.
 
         section.mt-10(v-for="company in data.companies")
-          h3.text-2xl {{ company.position }}
-          p.text-gray-600 {{ company.name }}
-          p.text-gray-600 {{ company.period }}
+          h3.text-2xl(data-aos="fade-right") {{ company.position }}
+          p.text-gray-600(data-aos="fade-right") {{ company.name }}
+          p.text-gray-600(data-aos="fade-right") {{ company.period }}
 
       //- Skills/Tools
       section.mt-40
@@ -121,13 +105,9 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 import StaticData from '~/static/data'
 
 export default {
-  components: {
-    Logo
-  },
   asyncData() {
     return {
       data: StaticData
