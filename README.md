@@ -1,6 +1,6 @@
-# resume-2020
+# Portfolio
 
-> My luminous Nuxt.js project
+> Alfonz Montelibano's web development portfolio and resume.
 
 ## Build Setup
 
