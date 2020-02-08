@@ -7,10 +7,9 @@ const aosPlugin = {
     AOS.init({
       duration: 1000,
       once: true,
+      offset: 20,
     })
   }
 }
 
-if (process.client) {
-  Vue.use(aosPlugin)
-}
+Vue.use(aosPlugin)

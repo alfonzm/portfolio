@@ -23,5 +23,6 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: []
+  plugins: [],
+  separator: '_',
 }

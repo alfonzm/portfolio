@@ -1,4 +1,10 @@
 export default {
+  links: [
+    'projects',
+    'talks',
+    'about',
+    'contact'
+  ],
   projects: [
     {
       title: 'Ragna Market',
@@ -128,41 +134,41 @@ export default {
   ],
   talks: [
     {
-      title: 'Creating Universal Apps with Nuxt.js',
-      description: 'HTML Cebu / iioffice Cebu / July 2018',
+      title: 'Creating Server-Side Rendered SPAs with Nuxt.js',
+      description: 'HTML Cebu, iioffice, Jul 2018',
       image_url: 'nuxt-talk.png',
     },
     {
       title: '1st Cebu Game Developer\'s Meet Up',
-      description: 'Philosophia Library Cafe / Cebu / March 2017',
+      description: 'Philosophia Library Cafe, Cebu, Mar 2017',
       image_url: 'cebu-gamedev-talk.jpeg',
     },
     {
       title: 'Game Dev Workshop: Level-Up! 2nd USC GameCon',
-      description: 'University of San Carlos, December 2016',
+      description: 'University of San Carlos, Dec 2016',
       image_url: 'usc-talk-2.jpg',
     },
     {
       title: 'Game Dev Workshop with Unity',
-      description: 'USJR Basak Campus, March 2016',
+      description: 'USJR Basak Campus, Mar 2016',
       image_url: 'usc-workshop.jpg',
     },
     {
       title: '1st USC GameCon',
-      description: 'University of San Carlos, November 2015',
-    },
-    {
-      title: 'Tech 101: Game Development',
-      description: 'University of San Carlos, February 2014',
+      description: 'University of San Carlos, Nov 2015',
     },
     {
       title: '2nd CS Dept. Research Forum',
-      description: 'University of San Carlos, September 2014',
+      description: 'University of San Carlos, Sep 2014',
+    },
+    {
+      title: 'Tech 101: Game Development',
+      description: 'University of San Carlos, Feb 2014',
     },
   ],
   companies: [
     {
-      position: 'Full-Stack Web Develooper / iOS Developer',
+      position: 'Full-Stack Web Developer / iOS Developer',
       name: 'LIG Philippines Inc.',
       period: 'Jun 2017—Present'
     },
@@ -180,6 +186,38 @@ export default {
       position: 'Unity Game Developer & Game Designer',
       name: 'AZ Technical Laboratory',
       period: 'Nov 2014—Feb 2015'
+    },
+  ],
+  skills: [
+    {
+      name: 'Front-End Web Development',
+      skills: [
+        ['Vue', 'React'],
+        ['Nuxt.js', 'Next.js', 'Vuex', 'Redux'],
+        ['HTML5', 'CSS3', 'Javascript', 'ES6+'],
+        ['npm', 'Webpack', 'etc'],
+        ['SASS/SCSS', 'Pug'],
+        ['Tailwind', 'Bulma', 'Bootstrap'],
+      ],
+    },
+    {
+      name: 'Back-End Web Development',
+      skills: [
+        ['Laravel', 'LAMP stack (Linux', 'Apache', 'MySQL', 'PHP)'],
+        ['Node', 'Express', 'MongoDB'],
+        ['RESTful API', '3rd Party API integrations'],
+        ['Amazon Web Services', 'Firebase'],
+      ],
+    },
+    {
+      name: 'Other / Tools',
+      skills: [
+        ['Git', 'Docker'],
+        ['Unix', 'zsh', 'bash', 'vim'],
+        ['iOS (Swift)'],
+        ['Graphic Design', 'Sketch', 'Photoshop'],
+        ['Game Development', 'Love2D (Lua)', 'Unity', 'HaxeFlixel'],
+      ],
     },
   ]
 }

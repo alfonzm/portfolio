@@ -28,10 +28,11 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {
-      src: '~/plugins/aos.js',
-      mode: 'client'
-    }
+    // {
+    //   src: '~/plugins/aos.js',
+    //   mode: 'client'
+    // },
+    '~/plugins/vue-scrollto.js',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -44,6 +45,13 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    [
+      'vue-scrollto/nuxt',
+      {
+        duration: 1500,
+        easing: 'ease-in-out',
+      }
+    ],
   ],
   /*
   ** Build configuration
@@ -54,5 +62,9 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
   }
 }
