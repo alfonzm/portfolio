@@ -82,7 +82,7 @@
 
         section.companies-section.mt-10
           .company(v-for="(company, index) in data.companies" :class="{ 'pb-10': index < data.companies.length-1 }")
-            h3.mb-1.text-xl.sm_text-2xl.leading-tight(data-aos="fade-right") {{ company.position }}
+            h3.text-xl.sm_text-2xl.leading-tight(data-aos="fade-right") {{ company.position }}
             p.text-gray-600(data-aos="fade-right") {{ company.name }}
             p.text-gray-600(data-aos="fade-right") {{ company.period }}
 

@@ -9,7 +9,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'I\'m Alfonz Montelibano—a software engineer who loves clean code and beautiful design. This is my web development portfolio website.' }
+      { hid: 'description', name: 'description', content: 'I\'m Alfonz Montelibano—a software engineer who loves clean code and beautiful design. This is my web development portfolio website.' },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: '/usc-talk-2.jpg',
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

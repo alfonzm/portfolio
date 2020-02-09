@@ -8,7 +8,7 @@ export default {
   projects: [
     {
       title: 'Ragna Market',
-      description: 'Ragna Market is an online marketplace for Ragnarok Online (MMORPG) where players can browse and upload in-game items they want to trade with other players. Made with <strong>Laravel</strong> and <strong>Amazon Web Services</strong>.',
+      description: 'Ragna Market is an online marketplace for Ragnarok Online (MMORPG) where players can browse and upload in-game items they want to trade with other players. Made with <strong>Laravel</strong>, <strong>Vue</strong> and <strong>Amazon Web Services</strong>.',
       image_url: 'ragnamarket.png',
       links: [
         {
@@ -187,6 +187,11 @@ export default {
       name: 'AZ Technical Laboratory',
       period: 'Nov 2014—Feb 2015'
     },
+    {
+      position: 'Web Developer & Designer',
+      name: 'Freelance',
+      period: 'Mar 2014—Oct 2014'
+    },
   ],
   skills: [
     {
@@ -207,6 +212,7 @@ export default {
         ['Node', 'Express', 'MongoDB'],
         ['RESTful API', '3rd Party API integrations'],
         ['Amazon Web Services', 'Firebase'],
+        ['Wordpress', 'Codeigniter'],
       ],
     },
     {
