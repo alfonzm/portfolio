@@ -11,10 +11,30 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'I\'m Alfonz Montelibano—a software engineer who loves clean code and beautiful design. This is my web development portfolio website.' },
       {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'Alfonz Montelibano\'s Portfolio',
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'I\'m Alfonz Montelibano—a software engineer who loves clean code and beautiful design. This is my web development portfolio website.',
+      },
+      {
         hid: 'og:image',
         name: 'og:image',
         content: '/usc-talk-2.jpg',
-      }
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: 'https://alfonzm.com',
+      },
+      {
+        hid: 'og:type',
+        name: 'og:type',
+        content: 'website',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

@@ -17,7 +17,7 @@ export default {
         },
         {
           label: 'Facebook Page',
-          url: 'https://facebook.com/ragnamarket',
+          url: 'https://www.facebook.com/Ragna-Marketcom-184012118837081',
         },
       ]
     },
