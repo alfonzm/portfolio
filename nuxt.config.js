@@ -48,16 +48,18 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/assets/css/main.css',
+    '@/assets/css/aos.scss',
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    // {
-    //   src: '~/plugins/aos.js',
-    //   mode: 'client'
-    // },
     '~/plugins/vue-scrollto.js',
+    {
+      src: '~/plugins/aos',
+      mode: 'client',
+    }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -91,5 +93,8 @@ export default {
   server: {
     port: 3000,
     host: '0.0.0.0',
-  }
+  },
+  purgeCSS: {
+    whitelist: ['aos-init', 'aos-animate', 'data-aos-delay', 'data-aos-duration']
+  },
 }
