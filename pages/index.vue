@@ -1,10 +1,11 @@
 <template lang="pug">
-  .font-sans.text-gray-900.cursor-default
+  .font-sans.text-gray-900.cursor-default.parallax-wrapper(@scroll='refreshAos')
     .container.mx-auto.px-5.lg_px-32
       //- Hi
       section.flex.h-screen
-        .m-auto.w-full
-          h1.text-4xl.sm_text-6xl.leading-none.font-bold.-mt-8.sm_mt-0(data-aos="fade-up")
+        //- img.profile-image(:src="require(`@/assets/images/alfonz.jpg`)")
+        .my-auto.z-10.w-full
+          h1.text-4xl.sm_text-6xl.leading-none.font-bold.-mt-8.sm_mt-0(data-aos='fade-up')
             | Hi. I'm
             |
             span.text-teal-400 Alfonz Montelibano
@@ -12,13 +13,13 @@
 
           //- nav links
           ul.flex.mt-6
-            li(v-for="(link, i) in data.links" data-aos="fade-up" :data-aos-delay="String((i+1) * 200)")
+            li(v-for="(link, i) in data.links" data-aos='fade-up' :data-aos-delay="String((i+1) * 200)")
               a.big-link.animated-link.capitalize.text-xl.sm_text-3xl.mr-4.sm_mr-12(href='#' v-scroll-to="`#${link}`") {{ link }}
 
       //- Projects
       section.pt-16#projects
         .max-w-4xl
-          h2.text-3xl.sm_text-4xl.font-bold.leading-tight(data-aos="fade-up") Here are some projects I worked on.
+          h2.text-3xl.sm_text-4xl.font-bold.leading-tight(data-aos='fade-up') Here are some projects I worked on.
 
         section.mt-12(v-for="project in data.projects" data-aos="fade-right")
           h3.text-3xl {{ project.title }}
@@ -47,7 +48,7 @@
       //- Games
       section.pt-16.mt-32#games
         .max-w-4xl
-          h2.text-3xl.sm_text-4xl.font-bold.leading-tight(data-aos="fade-up") I’ve also developed a few video games and joined game-making contests.
+          h2.text-3xl.sm_text-4xl.font-bold.leading-tight(data-aos='fade-up') I’ve also developed a few video games and joined game-making contests.
 
         section
           .flex.flex-wrap.-mx-4
@@ -67,7 +68,7 @@
       //- Talks
       section.pt-16.mt-32#talks
         .max-w-4xl
-          h2.text-3xl.sm_text-4xl.font-bold.leading-tight(data-aos="fade-up") I do talks & workshops about web and game development as well.
+          h2.text-3xl.sm_text-4xl.font-bold.leading-tight(data-aos='fade-up') I do talks & workshops about web and game development as well.
 
         //- Nuxt talk
         section.mt-10(v-for="talk in data.talks" data-aos="fade-right")
@@ -79,7 +80,7 @@
 
       //- Work
       section.pt-16.mt-32#about
-        h2.text-3xl.sm_text-4xl.font-bold.leading-tight(data-aos="fade-up") I've been working in the IT industry for almost six years.
+        h2.text-3xl.sm_text-4xl.font-bold.leading-tight(data-aos='fade-up') I've been working in the IT industry for almost six years.
 
         section.companies-section.mt-10.anchor-work(data-aos-offset="150")
           .company(
@@ -92,7 +93,7 @@
 
       //- Skills/Tools
       section.mt-40
-        h2.text-3xl.sm_text-4xl.font-bold.leading-tight(data-aos="fade-up") Here's a list of my skillset and the tools I use.
+        h2.text-3xl.sm_text-4xl.font-bold.leading-tight(data-aos='fade-up') Here's a list of my skillset and the tools I use.
 
         template(v-for="(skills, skillCategoryIdx) in data.skills")
           h3.text-2xl.mt-8(data-aos="fade-right" data-aos-offset="150" :class="`anchor-skill-${skillCategoryIdx}`") {{ skills.name }}
@@ -108,8 +109,8 @@
       //- Thank you
       section.mt-8.flex.h-screen.relative#contact
         .m-auto.w-full
-          .text-5xl.sm_text-6xl.leading-none.font-bold(data-aos="fade-up") I look forward to working with you soon. 👋
-          .mt-3.text-3xl.sm_text-3xl.text-gray-500.leading-none(data-aos="fade-up")
+          .text-5xl.sm_text-6xl.leading-none.font-bold(data-aos='fade-up') I look forward to working with you soon. 👋
+          .mt-3.text-3xl.sm_text-3xl.text-gray-500.leading-none(data-aos='fade-up')
             | I can be reached at
             |
             a.underline.gray-link(href="mailto:m.alfonz@gmail.com") m.alfonz@gmail.com
@@ -124,12 +125,18 @@
 </template>
 
 <script>
+import AOS from 'aos'
 import StaticData from '~/static/data'
 
 export default {
   asyncData() {
     return {
       data: StaticData
+    }
+  },
+  methods: {
+    refreshAos() {
+      AOS.refresh()
     }
   }
 }
@@ -204,5 +211,25 @@ a.animated-link
     border-radius: 7px
     border: 1px solid #888
     background: white
+
+.parallax-wrapper
+  height: 100vh
+  overflow-y: scroll
+  perspective: 3px
+
+img.profile-image
+  position: absolute
+  z-index: 0
+  opacity: 0.4
+  top: 50%
+  transform: translateY(-50%) translateZ(-1px) scale(1.2)
+  right: 0
+  width: 500px
+
+.p-base
+  perspective: 0px
+  height: 100vh
+  overflow-x: hidden
+  overflow-y: auto
 
 </style>
