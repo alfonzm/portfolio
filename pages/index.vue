@@ -84,10 +84,10 @@ a.animated-link
   &:hover:after
     width: 100%
 
-.parallax-wrapper
-  height: 100vh
-  overflow-y: scroll
-  perspective: 3px
+// .parallax-wrapper
+//   height: 100vh
+//   overflow-y: scroll
+//   perspective: 3px
 
 img.profile-image
   position: absolute
