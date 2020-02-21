@@ -77,6 +77,7 @@ export default {
       {
         duration: 1500,
         easing: 'ease-in-out',
+        container: '.parallax-wrapper',
       }
     ],
   ],
